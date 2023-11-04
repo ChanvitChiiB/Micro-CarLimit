@@ -93,7 +93,9 @@ void connectWifi(){
 void sender(){
   if (inTime - outTime < tolerance) {
     getTime();
-    current++;
+    if(current < maximum){
+      current++;
+    }
     Serial.printf("Set string... %s\n", Firebase.RTDB.setString(&fbdo, _tableValues, F("IN")) ? "in ok" : fbdo.errorReason().c_str());
     FirebaseJson content;
     content.set("fields/current/doubleValue", String(current).c_str());
@@ -145,11 +147,18 @@ void setup() {
   Firebase.begin(&config, &auth);
 
   if (Firebase.Firestore.getDocument(&fbdo, FIREBASE_PROJECT_ID, "", documentPath.c_str(), current_input.c_str())){
-    current = atoi(current_input.c_str());
     Serial.printf("ok\n%s\n\n", fbdo.payload().c_str());
   }
   else
     Serial.println(fbdo.errorReason());
+
+  FirebaseJson payload;
+  payload.setJsonData(fbdo.payload().c_str());
+  FirebaseJsonData jsonData;
+  payload.get(jsonData, "fields/current/integerValue", true);
+  Serial.println(jsonData.intValue);
+  current = jsonData.intValue;
+  Serial.printf("current = %d\n\n",current);
   
 }
 
