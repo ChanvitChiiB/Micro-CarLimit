@@ -4,13 +4,13 @@
 #include "addons/TokenHelper.h"
 #include "addons/RTDBHelper.h"
 
-#define FIREBASE_HOST "https://micro-6910f-default-rtdb.asia-southeast1.firebasedatabase.app/"
-#define FIREBASE_AUTH "8KUYhtIMQogsCIE0sgfRmpthIQ0oE62yHItGxo5k"
-#define API_KEY "AIzaSyCUoC_w3nwSFJurqSp-hWDadQQ2HMHtBtQ"
+#define FIREBASE_HOST ""
+#define FIREBASE_AUTH ""
+#define API_KEY ""
 #define FIREBASE_PROJECT_ID "micro-6910f"
 #define ntp_Server "pool.ntp.org"
-#define ssid "ChiiB"
-#define password "0653016872B"
+#define ssid ""
+#define password ""
 
 FirebaseData fbdo;
 FirebaseAuth auth;
