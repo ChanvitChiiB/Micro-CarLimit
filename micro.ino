@@ -4,7 +4,7 @@
 #include "addons/TokenHelper.h"
 #include "addons/RTDBHelper.h"
 
-#define FIREBASE_HOST ""
+#define FIREBASE_HOST "" //LINK
 #define FIREBASE_AUTH ""
 #define API_KEY ""
 #define FIREBASE_PROJECT_ID "micro-6910f"
