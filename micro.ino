@@ -4,10 +4,10 @@
 #include "addons/TokenHelper.h"
 #include "addons/RTDBHelper.h"
 
-#define FIREBASE_HOST "" //LINK
-#define FIREBASE_AUTH ""
-#define API_KEY ""
-#define FIREBASE_PROJECT_ID "micro-6910f"
+#define FIREBASE_HOST "" // URL in Realtime Database
+#define FIREBASE_AUTH "" // Database secrets
+#define API_KEY "" // Web API Key
+#define FIREBASE_PROJECT_ID ""
 #define ntp_Server "pool.ntp.org"
 #define ssid ""
 #define password ""
